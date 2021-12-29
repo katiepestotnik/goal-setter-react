@@ -1,24 +1,41 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from "./components/Header";
+import Main from "./components/Main";
+import Home from "./pages/Home";
+import Signup from "./pages/Signup";
+import Login from "./pages/Login";
+import { Switch, Route } from "react-router-dom";
+import Global from "./Global";
+import AllGoals from './pages/AllGoals';
+import SingleGoal from './pages/SingleGoal';
+import Form from './pages/Form';
 
-function App() {
+import { useState, useEffect } from 'react';
+
+
+
+function App(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Global>
+      <Header />
+      <Switch>
+        <Route exact path="/">
+          <Home/>
+        </Route>
+        <Route
+          path="/signup"
+          render={(rp)=> <Signup {...rp}/>}>
+        </Route>
+        <Route
+          path="/login"
+          render={(rp)=> <Login {...rp}/>}>
+        </Route>
+        <Route
+          path="/main"
+          render={(rp)=> <Main {...rp} />}>
+        </Route>
+      </Switch>
+    </Global>
   );
 }
 
