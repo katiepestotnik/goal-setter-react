@@ -3,7 +3,7 @@
 import { useState, createContext } from 'react';
 
 const initalState = {
-    url: "http://localhost:3000",
+    url: "https://goal-setter-api.herokuapp.com",
     token: null
 };
 

@@ -16,7 +16,7 @@ const Login = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const { username, password, email } = form;
-        fetch(`http://localhost:3000/login`, {
+        fetch(`https://goal-setter-api.herokuapp.com/login`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
