@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useState, useContext} from 'react';
 import { Context } from "../Global";
 
 const Signup = (props) => {
@@ -18,6 +18,7 @@ const Signup = (props) => {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
+                "Accept": "application/json",
                 Authorization: `bearer ${state.token}`
             },
             body: JSON.stringify({ username, password, email })
@@ -31,7 +32,6 @@ const Signup = (props) => {
                 email: ''
             });
             props.history.push('/login')
-            console.log(data.token)
 
         });
     }

@@ -20,6 +20,7 @@ const Login = (props) => {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
+                "Accept": "application/json",
                 Authorization: `bearer ${state.token}`
             },
             body: JSON.stringify({ username, password, email })
