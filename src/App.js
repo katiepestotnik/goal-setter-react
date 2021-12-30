@@ -6,11 +6,11 @@ import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import { Switch, Route } from "react-router-dom";
 import Global from "./Global";
-import AllGoals from './pages/AllGoals';
-import SingleGoal from './pages/SingleGoal';
-import Form from './pages/Form';
-
-import { useState, useEffect } from 'react';
+// import AllGoals from './pages/AllGoals';
+// import SingleGoal from './pages/SingleGoal';
+// import Form from './pages/Form';
+// import { Context } from './Global';
+// import { useState, useEffect, useContext } from 'react';
 
 
 

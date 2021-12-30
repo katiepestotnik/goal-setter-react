@@ -14,10 +14,11 @@ const Signup = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const { username, password, email } = form;
-        fetch(`${state.url}/login`, {
+        fetch(`${state.url}/users`, {
             method: "POST",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                Authorization: `bearer ${state.token}`
             },
             body: JSON.stringify({ username, password, email })
         }).then(response => response.json()).then(data => {
@@ -37,7 +38,7 @@ const Signup = (props) => {
     return (
         <div>
             <div>
-                <h3>&nbsp;   Create Account</h3>
+                <h3>Create Account</h3>
                 <form onSubmit={handleSubmit}>
                     <div>
                         <label for="CreateUsername">Username</label>

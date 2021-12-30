@@ -40,7 +40,7 @@ const Login = (props) => {
     return (
         <div>
             <div>
-                <h3>&nbsp;   Login to your Account</h3>
+                <h3>Login to your Account</h3>
                 <form onSubmit={handleSubmit}>
                     <div>
                         <label for="CreateUsername">Username</label>
