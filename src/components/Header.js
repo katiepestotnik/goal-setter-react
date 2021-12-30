@@ -4,7 +4,7 @@ import { useContext} from 'react';
 const Header = (props) => {
     const [state, setState] = useContext(Context);
     const logout = <Link to="/">
-    <button onClick={() => {
+    <button className="logout-button" onClick={() => {
         window.localStorage.removeItem("token")
         setState({...state, token:null})
     }}>
@@ -15,7 +15,7 @@ const Header = (props) => {
         <div>
             <nav>
                 <h1>Goals</h1>
-                <Link className="logout" to="/">{state.token?logout:null}</Link>
+                <Link to="/">{state.token?logout:null}</Link>
             </nav>
         </div>
     );

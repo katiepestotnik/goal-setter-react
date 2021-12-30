@@ -4,7 +4,7 @@ const Main = (props) => {
     const [state, setState] = useContext(Context);
     console.log(state.token)
     useEffect(() => {
-        if (state.token === null) {
+        if (state.token === null || state.token === undefined) {
             alert('Login not verified: Register or Reenter Login')
             props.history.push('/')
         }

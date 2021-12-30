@@ -16,11 +16,10 @@ const Login = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const { username, password, email } = form;
-        fetch(`${state.url}/login`, {
+        fetch(`http://localhost:3000/login`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "Accept": "application/json",
                 Authorization: `bearer ${state.token}`
             },
             body: JSON.stringify({ username, password, email })
@@ -34,8 +33,6 @@ const Login = (props) => {
                 email: ''
             });
             props.history.push('/main')
-            console.log(state.token)
-
         });
     }
     return (

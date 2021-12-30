@@ -19,7 +19,6 @@ const Signup = (props) => {
             headers: {
                 "Content-Type": "application/json",
                 "Accept": "application/json",
-                Authorization: `bearer ${state.token}`
             },
             body: JSON.stringify({ username, password, email })
         }).then(response => response.json()).then(data => {
@@ -31,8 +30,9 @@ const Signup = (props) => {
                 password: '',
                 email: ''
             });
+            const token = localStorage.getItem("token")
+            console.log(token)
             props.history.push('/login')
-
         });
     }
     return (

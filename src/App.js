@@ -16,19 +16,19 @@ import { useState, useEffect, useContext } from 'react';
 
 
 function App(props) {
-  useEffect(() => {
-    const token = localStorage.getItem("token")
-    console.log(token)
-    if (token) {
-      fetch(`https://goal-setter-api.herokuapp.com/auto_login`, {
-        headers: {
-          Authorization: `Bearer ${token}`
-        }
-      }).then(response => response.json()).then(data => {
-        console.log(data)
-      })
-    }
-  }, [])
+  // useEffect(() => {
+  //   const token = localStorage.getItem("token")
+  //   console.log(token)
+  //   if (token) {
+  //     fetch(`localhost:3000/auto_login`, {
+  //       headers: {
+  //         Authorization: `Bearer ${token}`
+  //       }
+  //     }).then(response => response.json()).then(data => {
+  //       console.log(data)
+  //     })
+  //   }
+  // }, [])
   return (
     <Global>
       <Header />
