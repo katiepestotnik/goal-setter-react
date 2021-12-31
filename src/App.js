@@ -1,7 +1,7 @@
 import './App.css';
 import Header from "./components/Header";
 // all posts in main
-import Main from "./pages/Main";
+import Main from "./components/Main";
 import Home from "./pages/Home";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";

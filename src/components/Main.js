@@ -1,14 +1,16 @@
 import { useEffect, useState, useContext } from 'react';
 import { Context } from "../Global";
 import { Route, Switch } from 'react-router-dom';
-import Index from './Index';
+import AllGoals from '../pages/AllGoals';
+import SingleGoal from '../pages/SingleGoal';
+import Form from '../pages/Form';
 const Main = (props) => {
     const [state, setState] = useContext(Context);
     const { url, token } = state;
 
     const [goals, setGoals] = useState([]);
     const getGoals = async () => {
-        const response = await fetch(`${state.url}/goals`, {
+        const response = await fetch(`${url}/goals`, {
             method: 'get',
             headers: {
                 Authorization: "bearer " + token,
@@ -21,19 +23,6 @@ const Main = (props) => {
         console.log(data);
         setGoals(data)
     };
-
-    // const auto = async () =>        
-    // {
-    // const response = await fetch(`${state.url}/auto_login`, {
-    //     headers: {
-    //         Authorization: `Bearer ${state.token}`
-    //     }
-    //     })
-    //     const data = await response.json()
-    //     console.log(data)
-    // };
-
-
     useEffect(() => {
         const token = localStorage.getItem("token")
         console.log(token)
@@ -45,12 +34,29 @@ const Main = (props) => {
     }, []);
     return (
         <>
+            <h1>All Goals</h1>
             <Switch>
                 <Route
-                    exact path="/main">
-                    <Index goals={goals}/>
+                    path="/main">
+                    <AllGoals goals={goals}/>
                 </Route>
-            </Switch>
+                <Route
+                    path="/goal/:id"
+                    render={(rp) => <SingleGoal
+                            {...rp}
+                        goals={goals}
+                    />}
+                />
+                <Route
+                path="/new">
+                    render={(rp) => <Form {...rp}/>}
+                </Route>
+
+                <Route
+                    path="/edit"
+                    render={(rp) => <Form {...rp} />}
+                />
+                </Switch>
         </>
 
     )
