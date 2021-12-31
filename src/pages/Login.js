@@ -3,19 +3,6 @@ import { Context } from "../Global";
 
 
 const Login = (props) => {
-    useEffect(() => {
-        const token = localStorage.getItem("token")
-        console.log(token)
-        if (token) {
-        fetch(`${state.url}/auto_login`, {
-            headers: {
-            Authorization: `Bearer ${token}`
-            }
-        }).then(response => response.json()).then(data => {
-        console.log(data)
-        })
-        };
-    }, []);
     //global state
     const [state, setState] = useContext(Context);
     const [form, setForm] = useState({
