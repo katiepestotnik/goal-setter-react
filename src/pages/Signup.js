@@ -24,7 +24,7 @@ const Signup = (props) => {
         }).then(response => response.json()).then(data => {
             //store token for refresh
             window.localStorage.setItem("token", JSON.stringify(data));
-            setState({ ...state, token: data.token });
+            // setState({ ...state, token: data.token });
             setForm({
                 username: '',
                 password: '',

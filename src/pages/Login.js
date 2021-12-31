@@ -1,8 +1,21 @@
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import { Context } from "../Global";
 
 
 const Login = (props) => {
+    useEffect(() => {
+        const token = localStorage.getItem("token")
+        console.log(token)
+        if (token) {
+        fetch(`${state.url}/auto_login`, {
+            headers: {
+            Authorization: `Bearer ${token}`
+            }
+        }).then(response => response.json()).then(data => {
+        console.log(data)
+        })
+        };
+    }, []);
     //global state
     const [state, setState] = useContext(Context);
     const [form, setForm] = useState({
@@ -16,7 +29,7 @@ const Login = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const { username, password, email } = form;
-        fetch(`https://goal-setter-api.herokuapp.com/login`, {
+        fetch(`${state.url}/login`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
