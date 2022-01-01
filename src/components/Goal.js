@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 const Goal = ({goal}) => {
     return (
         <div>
-            <Link to={`goal/${goal.id}`}>
+            <Link to={`/goal/${goal.id}`}>
                 <h3>{goal.name}</h3>
             </Link>
             <p>{goal.description}</p>
