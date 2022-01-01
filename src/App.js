@@ -1,12 +1,16 @@
 import './App.css';
 import Header from "./components/Header";
-// all posts in main
-import Main from "./components/Main";
 import Home from "./pages/Home";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
+import Main from './pages/Main';
+import SingleGoal from './pages/SingleGoal';
+//import AllGoals from './pages/AllGoals';
+import Form from './pages/Form';
 import { Switch, Route } from "react-router-dom";
+//import { Context } from './Global';
 import Global from "./Global";
+//import { useContext, useEffect, useState } from 'react';
 
 function App(props) {
   return (
@@ -27,6 +31,22 @@ function App(props) {
         <Route
           path="/main"
           render={(rp)=> <Main {...rp}/>}>
+        </Route>
+        {/* <Route
+          path="/goals"
+          render={(rp)=> <AllGoals {...rp}/>}>
+        </Route> */}
+        <Route
+          path="/goal/:id"
+          render={(rp)=> <SingleGoal {...rp}/>}>
+        </Route>
+        <Route
+          path="/new"
+          render={(rp) => <Form {...rp}/>}>
+        </Route>
+        <Route
+          path="/edit"
+          render={(rp) => <Form {...rp} />}>
         </Route>
       </Switch>
     </Global>
