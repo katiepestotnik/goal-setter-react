@@ -32,22 +32,6 @@ function App(props) {
           path="/main"
           render={(rp)=> <Main {...rp}/>}>
         </Route>
-        {/* <Route
-          path="/goals"
-          render={(rp)=> <AllGoals {...rp}/>}>
-        </Route> */}
-        <Route
-          path="/goal/:id"
-          render={(rp)=> <SingleGoal {...rp}/>}>
-        </Route>
-        <Route
-          path="/new"
-          render={(rp) => <Form {...rp}/>}>
-        </Route>
-        <Route
-          path="/edit"
-          render={(rp) => <Form {...rp} />}>
-        </Route>
       </Switch>
     </Global>
   );

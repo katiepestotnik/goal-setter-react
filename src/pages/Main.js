@@ -1,6 +1,9 @@
 import { useContext, useEffect, useState } from "react";
 import { Context } from "../Global";
-import { Link } from 'react-router-dom';
+import { Link, Route, Switch } from 'react-router-dom';
+import SingleGoal from "./SingleGoal";
+import Form from "./Form";
+import AllGoals from "./AllGoals";
 const Main = (props) => {
     const [state, setState] = useContext(Context);
     const { url, token } = state;
@@ -23,22 +26,30 @@ const Main = (props) => {
     useEffect(() => {
         const token = localStorage.getItem("token")
         console.log(token)
-        if (state.token === null || state.token === undefined) {
+        if (!token) {
             alert('Login not verified: Register or Reenter Login')
             props.history.push('/')
         };
         getGoals();
     }, []);
     return(
-    <div>
-            <h1>Main</h1>
-            <div>Affirmation Carousel</div>
-            <div>
-                {goals.map((goal) => {
-                    return <Link to={`/goal/${goal.id}`}><li>{goal.name}</li></Link>
-                })}
-            </div>
-    </div>
-    )
+        <Switch>
+        <Route
+          exact path="/main"
+                render={(rp) => <AllGoals {...rp} goals={goals}/>}>
+        </Route>
+        <Route
+          path="/main/goal/:id"
+                render={(rp) => <SingleGoal {...rp} goals={goals}/>}>
+            </Route>
+            <Route
+          path="/main/new"
+                render={(rp) => <Form {...rp} state={state}/> }>
+        </Route>
+        <Route
+          path="/main/edit"
+                render={(rp) => <Form {...rp} state={state}/>}>
+        </Route>
+        </Switch>)
 };
 export default Main;
