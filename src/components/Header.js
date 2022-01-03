@@ -15,7 +15,7 @@ const Header = (props) => {
         <div>
             <nav>
                 <h1>Goals</h1>
-                <Link to="/">{state.token?logout:null}</Link>
+                <Link to="/">{state.token ? logout : null}</Link>
             </nav>
         </div>
     );
