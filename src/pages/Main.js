@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { Context } from "../Global";
-import { Link, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import SingleGoal from "./SingleGoal";
 import Form from "./Form";
 import AllGoals from "./AllGoals";
@@ -16,6 +16,7 @@ const Main = (props) => {
         user_id: ""
     };
     const [targetGoal, setTargetGoal] = useState(nullGoal);
+    
     const getGoals = async () => {
         const response = await fetch(`${url}/goals`, {
             method: 'get',
@@ -27,8 +28,6 @@ const Main = (props) => {
         });
         const data = await response.json();
         setGoals(data);
-        console.log(data);
-        setGoals(data)
     };
     const addGoal = async (newGoal) => {
         const response = await fetch(`${url}/goals`, {
@@ -39,8 +38,10 @@ const Main = (props) => {
                 "Accept":"application/json"
             },
             body: JSON.stringify(newGoal),
+
         });
         getGoals();
+        //convert date here?
     };
     const getTargetGoal = (goal) => {
         setTargetGoal(goal);
@@ -54,9 +55,10 @@ const Main = (props) => {
             "Content-Type": "application/json",
             "Accept":"application/json"
           },
-          body: JSON.stringify(goal),
+            body: JSON.stringify(goal),
         });
         getGoals();
+        //convert date here?
     };
     const deleteGoal = async (goal) => {
         const response = await fetch(`${url}/goals/`+ goal.id, {
@@ -72,7 +74,6 @@ const Main = (props) => {
       };
     useEffect(() => {
         const token = localStorage.getItem("token")
-        console.log(token)
         if (!token) {
             alert('Login not verified: Register or Reenter Login')
             props.history.push('/')

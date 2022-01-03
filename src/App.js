@@ -4,14 +4,8 @@ import Home from "./pages/Home";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Main from './pages/Main';
-import SingleGoal from './pages/SingleGoal';
-//import AllGoals from './pages/AllGoals';
-import Form from './pages/Form';
 import { Switch, Route } from "react-router-dom";
-//import { Context } from './Global';
 import Global from "./Global";
-//import { useContext, useEffect, useState } from 'react';
-
 function App(props) {
   return (
     <Global>

@@ -10,13 +10,9 @@ const Form = ({ initialGoal, handleSubmit, buttonLabel, history}) => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    //pass formData to handleSubmit prop function
     handleSubmit(formData);
-    //push user back to main page
     history.push("/main");
   };
-
-  // Our Form, an input for the subject and details fields and a submit button
   return (
     <div>
     <form onSubmit={handleFormSubmit}>
@@ -56,16 +52,6 @@ const Form = ({ initialGoal, handleSubmit, buttonLabel, history}) => {
           name="description"
           />
         </label><br />
-        <label>
-          Goal Id:
-        <input
-          readonly
-          type="number"
-          onChange={handleChange}
-          value={formData.id}
-          name="goal_id"
-          />
-          </label><br/>
       <input type="submit" value={buttonLabel} />
       </form>
       <Link to="/main">

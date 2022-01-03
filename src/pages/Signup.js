@@ -24,14 +24,11 @@ const Signup = (props) => {
         }).then(response => response.json()).then(data => {
             //store token for refresh
             window.localStorage.setItem("token", JSON.stringify(data));
-            // setState({ ...state, token: data.token });
             setForm({
                 username: '',
                 password: '',
                 email: ''
             });
-            const token = localStorage.getItem("token")
-            console.log(token)
             props.history.push('/login')
         });
     }
