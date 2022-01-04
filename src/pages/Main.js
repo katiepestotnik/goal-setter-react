@@ -143,8 +143,11 @@ const Main = (props) => {
                 render={(rp) => <FormUpdate
                     {...rp}
                     state={state}
-                    initialGoal={nullUpdate}
+                    initialUpdate={nullUpdate}
                     handleSubmit={addUpdate}
+                    updates={updates}
+                    goals={goals}
+                    intialGoal={targetGoal}
                     buttonLabel="Add Update"/>}>
         </Route>
         <Route
