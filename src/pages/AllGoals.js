@@ -11,6 +11,7 @@ import {
 } from 'mdb-react-ui-kit';
 
 const AllGoals = (props) => {
+  console.log(props.goals)
   return (
     <div>
       <h1>All Goals</h1>
