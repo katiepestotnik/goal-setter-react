@@ -1,4 +1,6 @@
 //current problem, cannot add update not pulling the correct goal id
+// boolean problem possible as well
+//refresh problem
 
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
@@ -15,7 +17,8 @@ const FormUpdate = ({ initialUpdate, handleSubmit, buttonLabel, history, goals }
         history.push("/main");
       };
     return (
-        <div>
+      <div>
+        <h1>{goal.id}</h1>
          <form onSubmit={handleFormSubmit}>
           <label>
             Describe Action Taken to achieve this goal.
@@ -32,7 +35,9 @@ const FormUpdate = ({ initialUpdate, handleSubmit, buttonLabel, history, goals }
               type="number"
               onChange={handleChange}
               value={formData.self_evaluation}
-            name="self_evaluation"
+              name="self_evaluation"
+              min="1"
+              max="10"
             />
           </label><br />
         <label>
@@ -47,8 +52,6 @@ const FormUpdate = ({ initialUpdate, handleSubmit, buttonLabel, history, goals }
           <label>
             Goal ID #
             <input
-              readOnly
-              placeholder={goal.id}
               type="number"
               onChange={handleChange}
               value={formData.goal_id}
