@@ -18,12 +18,11 @@ const Main = (props) => {
         user_id: ""
     };
     const [targetGoal, setTargetGoal] = useState(nullGoal);
-    const nullUpdate = {
-        actions: "",
-        self_evaluation: "",
-        completed: "",
-        goal_id: ""
-    };
+    // const nullUpdate = {
+    //     actions: "",
+    //     self_evaluation: "",
+    //     completed: "",
+    // };
     
     const getGoals = async () => {
         const response = await fetch(`${url}/goals`, {
@@ -106,6 +105,7 @@ const Main = (props) => {
         getUpdates();
         //convert date here?
     };
+    
     useEffect(() => {
         const token = localStorage.getItem("token")
         if (!token) {
@@ -123,7 +123,7 @@ const Main = (props) => {
                 />}>
         </Route>
         <Route
-          path="/main/goal/:id"
+          exact path="/main/goal/:id"
                 render={(rp) => <SingleGoal {...rp}
                     goals={goals} edit={getTargetGoal}
                     deleteGoal={deleteGoal}
@@ -139,15 +139,14 @@ const Main = (props) => {
                     buttonLabel="Create Goal"/>}>
             </Route>
             <Route
-          path="/main/update"
+          path="/main/goals/:id/update"
                 render={(rp) => <FormUpdate
                     {...rp}
                     state={state}
-                    initialUpdate={nullUpdate}
+                    // initialUpdate={nullUpdate}
                     handleSubmit={addUpdate}
                     updates={updates}
                     goals={goals}
-                    intialGoal={targetGoal}
                     buttonLabel="Add Update"/>}>
         </Route>
         <Route

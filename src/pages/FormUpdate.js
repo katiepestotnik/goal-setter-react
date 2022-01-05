@@ -1,24 +1,28 @@
-//current problem, cannot add update not pulling the correct goal id
 // boolean problem possible as well
-//refresh problem
+//refresh problem: logic to push to login when token is null
 
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-const FormUpdate = ({ initialUpdate, handleSubmit, buttonLabel, history, goals }) => {
-  const goal = goals.find((g) => g.goal_id === goals.goal_id);
-    const [formData, setFormData] = useState(initialUpdate);
+const FormUpdate = ({ initialUpdate, handleSubmit, buttonLabel, history, match }) => {
+  const id =match.params.id
+  const [formData, setFormData] = useState({
+        actions: "",
+        self_evaluation: "",
+        completed: "",
+        goal_id: id
+    });
+  
     const handleChange = (event) => {
         setFormData({ ...formData, [event.target.name]: event.target.value });
     };
     const handleFormSubmit = (e) => {
       e.preventDefault();
-      console.log(goal.id)
       handleSubmit(formData);
-        history.push("/main");
+      console.log(formData)
+        history.push(`/main/goal/${id}`);
       };
     return (
       <div>
-        <h1>{goal.id}</h1>
          <form onSubmit={handleFormSubmit}>
           <label>
             Describe Action Taken to achieve this goal.
@@ -40,7 +44,7 @@ const FormUpdate = ({ initialUpdate, handleSubmit, buttonLabel, history, goals }
               max="10"
             />
           </label><br />
-        <label>
+        {/* <label>
           Goal Achieved?
           <input
             type="checkbox"
@@ -48,16 +52,7 @@ const FormUpdate = ({ initialUpdate, handleSubmit, buttonLabel, history, goals }
             value={formData.completed?"true":"false"}
             name="completed" 
             />
-          </label><br />
-          <label>
-            Goal ID #
-            <input
-              type="number"
-              onChange={handleChange}
-              value={formData.goal_id}
-              name="goal_id"
-            />
-          </label><br />
+          </label><br /> */}
       <input type="submit" value={buttonLabel} />
       </form>
         <Link to="/main/">

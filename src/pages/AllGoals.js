@@ -11,32 +11,27 @@ import {
 } from 'mdb-react-ui-kit';
 
 const AllGoals = (props) => {
-  console.log(props.goals)
   return (
     <div>
       <h1>All Goals</h1>
+      <div className="caroStyle">
       <MDBCarousel showControls showIndicators fade>
           <MDBCarouselInner>
             <MDBCarouselItem className='active'>
-            <MDBCarouselElement src="https://images.squarespace-cdn.com/content/v1/58fe2baeb8a79beb24af1b45/1513183011041-YKTLSDZT6HYOJXUL3NPZ/Goal+Setting" alt="Product" />
-            <MDBCarouselCaption>
-            <h5>Success</h5>
-            </MDBCarouselCaption>
+              <MDBCarouselElement src="https://i.pinimg.com/564x/ca/e2/6f/cae26fdc102447ac04426eb14098caf7.jpg" alt="Steve Jobs Quote" width="300" height="400" />
             </MDBCarouselItem>
             <MDBCarouselItem>
-            <MDBCarouselElement src="https://cdn-images-1.medium.com/max/3200/0*3tsM0Ft8x_e8mfJf" alt="Product" />
-            <MDBCarouselCaption>
-            <h5>Flag</h5>
-            </MDBCarouselCaption>
+            <MDBCarouselElement src="https://cdn.graciousquotes.com/wp-content/uploads/2020/08/Without-ambition-one-starts-nothing.-Without-work-one-finishes-nothing.-The-prize-will-not-be-sent-to-you.-You-have-to-win-it.-Ralph-Waldo-Emerson.jpg" alt="Ralph Waldo Emerson Quote" width="300" height="400" />
             </MDBCarouselItem>
             <MDBCarouselItem>
-            <MDBCarouselElement src="https://www.jax.org/-/media/9662db4519f94cba8f417e2eeb0e623e.jpg" alt="Product" />
+            <MDBCarouselElement src="https://cdn.graciousquotes.com/wp-content/uploads/2020/08/Ambition-is-the-path-to-success.-Persistence-is-the-vehicle-you-arrive-in.-Bill-Bradley.jpg" alt="Bill Bradley Quote" width="300" height="400" />
             <MDBCarouselCaption>
             <h5>Pointing</h5>
             </MDBCarouselCaption>
             </MDBCarouselItem>
         </MDBCarouselInner>
         </MDBCarousel>
+        </div>
       {props.goals.map((goal) => <Goal goal={goal} key={goal.id} />)}
       <Link to="/main/new"><button>Create New Goal</button></Link>
     </div>);

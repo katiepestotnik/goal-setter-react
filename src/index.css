@@ -1,3 +1,9 @@
 body {
   font-family: Roboto, Helvetica, Arial, sans-serif;
 }
+
+
+.caroStyle {
+  width: 50%;
+  margin: 0 auto;
+}

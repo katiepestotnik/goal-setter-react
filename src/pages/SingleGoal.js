@@ -9,7 +9,7 @@ const SingleGoal = (props) => {
     const found = single.filter((ele) => {
         return ele.goal_id === goal.id
     })
-    console.log(found)
+    console.log(id)
     return (
         <div>
             <h1>Goal: {goal.name}</h1>
@@ -30,10 +30,13 @@ const SingleGoal = (props) => {
                     return <><div>Actions Taken: {f.actions}</div>
                         <div>Score Update: {f.self_evaluation}</div>
                         <div>Goal Completed? {f.completed ? "true" : "false"}</div>
-                        <div>Goal ID # {f.goal_id}</div></>
+                        <div>Goal ID # {f.goal_id}</div>
+                                <button
+                onClick={(e) => props.deleteUpdate(found)}>Delete
+                            </button></>
                 })}
             </div>
-            <Link to="/main/update"><button>Add Update</button></Link>
+            <Link to={`/main/goals/${id}/update`}><button>Add Update</button></Link>
         </div>
 
     )}     
