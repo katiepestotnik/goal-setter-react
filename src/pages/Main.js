@@ -110,7 +110,6 @@ const Main = (props) => {
               },
         })
         getUpdates()
-        console.log(newUpdate)
         props.history.push(`/main/goal/${newUpdate.goal_id}`)
     }
     

@@ -9,8 +9,11 @@ Live Site:
 Technologies:
 - React
 
-- Bootstrap with mdb-react-ui-kit
-  -https://mdbootstrap.com/docs/b5/react/getting-started/installation/
+- Bootstrap with Material Design
+  - mdb-react-ui-kit
+  - https://mdbootstrap.com/docs/react/
+
+- User authentication/authorization with JWT
 
 - JavaScript, CSS, HTML
 
@@ -19,11 +22,11 @@ Technologies:
 Styling:
 - Favicon: https://favicon.io/emoji-favicons/
 - Responsive:
-  -Base CSS set for 414 x 736
-  -@media only screen and (min-width: 576px)
-  -@media only screen and (min-width: 768px)
-  -@media only screen and (min-width: 992px) 
-  -@media only screen and (min-width: 1200px)
+  - Base CSS set for 414 x 736
+  - @media only screen and (min-width: 576px)
+  - @media only screen and (min-width: 768px)
+  - @media only screen and (min-width: 992px) 
+  - @media only screen and (min-width: 1200px)
 
 ![Color Palette](https://i.pinimg.com/564x/8f/ce/17/8fce17ddc772198b6994c39f5e789382.jpg)
 
@@ -36,6 +39,8 @@ Future Improvement:
   - https://github.com/annthurium/affirmations/blob/master/affirmations.js
 - Better storage for error handling with token state look into npm install react-cookie
 
+Trello:
+- https://trello.com/b/gm3yRArm/goal-setter
 
 Backend: 
 - https://github.com/katiepestotnik/goal-setter-jwt-api
