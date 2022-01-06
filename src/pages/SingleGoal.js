@@ -19,15 +19,16 @@ const SingleGoal = (props) => {
             </button>
             <button
                 className="button-style"
-                onClick={(e) => props.deleteGoal(goal)}>DELETE
+                onClick={(e) => props.deleteGoal(goal)}>X
             </button>
             <div className="goal">Status Updates</div>
             <div>
                 <Link to={`/main/goals/${id}/update`}><button className="button-style">ADD UPDATE</button></Link>
+                <Link to={`/main`}><button className="button-style">BACK</button></Link>
             </div>
             <div className="full-body" style={{marginTop: "10px"}}>
                 {found.map((f) => {
-                    return <div className="found-box">
+                    return <div className="found-box container">
                                 <div className="single">Action: {f.actions}</div>
                                 <div className="single">% Goal Completed: {f.self_evaluation}</div>
                         {/* <div>Goal Completed? {f.completed ? "true" : "false"}</div> */}
@@ -39,6 +40,7 @@ const SingleGoal = (props) => {
                             </div> 
                 })}
             </div>
+            <div className="foot">Footer</div>
         </div>
 
     )}     

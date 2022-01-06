@@ -1,6 +1,7 @@
 // boolean problem possible as well
 //refresh problem: logic to push to login when token is null
 import { useState } from 'react';
+import {Link} from 'react-router-dom'
 const FormUpdate = ({ handleSubmit, buttonLabel, history, match }) => {
   const id =match.params.id
   const [formData, setFormData] = useState({
@@ -57,7 +58,9 @@ const FormUpdate = ({ handleSubmit, buttonLabel, history, match }) => {
                   type="submit"
                   value={buttonLabel}
                 />
-              </form> 
+        </form>
+        <Link to={`/main/goal/${id}`}>
+      <button className="button-style">BACK</button></Link>
           </div>)
 }
 export default FormUpdate;

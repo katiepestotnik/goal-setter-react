@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 const Form = ({ initialGoal, handleSubmit, buttonLabel, history}) => {
   const [formData, setFormData] = useState(initialGoal);
 
@@ -58,6 +59,8 @@ const Form = ({ initialGoal, handleSubmit, buttonLabel, history}) => {
         </label><br />
       <input className="button-style" type="submit" value={buttonLabel} />
       </form>
+      <Link to="/main">
+        <button className="button-style">BACK</button></Link>
     </div>
   );
 };

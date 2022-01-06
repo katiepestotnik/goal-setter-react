@@ -1,7 +1,6 @@
 import { useState, useContext} from 'react';
 import { Context } from "../Global";
 
-
 const Login = (props) => {
     //global state
     const [state, setState] = useContext(Context);
@@ -69,7 +68,8 @@ const Login = (props) => {
                         value="LOGIN">
                 </input>
             </form>
-    </div>
+            </div>
+            <div className="login-image"></div>
     </div>)
 };
 export default Login;

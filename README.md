@@ -38,6 +38,7 @@ Future Improvement:
   - https://github.com/misselliev/affirmations-api
   - https://github.com/annthurium/affirmations/blob/master/affirmations.js
 - Better storage for error handling with token state look into npm install react-cookie
+- Add Loading Image for delayed inital API call for user credentials
 
 Trello:
 - https://trello.com/b/gm3yRArm/goal-setter
@@ -45,3 +46,9 @@ Trello:
 Backend: 
 - https://github.com/katiepestotnik/goal-setter-jwt-api
 - https://goal-setter-auth.herokuapp.com
+
+
+
+Responsive
+Completed model
+Refresh

@@ -62,6 +62,7 @@ const Signup = (props) => {
                         className='button-style'></input>
                 </form>
             </div>
+            <div className="signup-image"></div>
         </div>
     )
 };

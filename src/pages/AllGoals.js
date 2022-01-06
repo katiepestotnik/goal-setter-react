@@ -15,7 +15,7 @@ const AllGoals = (props) => {
         <MDBCarousel
           fade
           showIndicators={true}
-          slide={true}>
+          slide="true">
           <MDBCarouselInner>
             <MDBCarouselItem className='active'>
               <MDBCarouselElement src="https://i.pinimg.com/564x/ca/e2/6f/cae26fdc102447ac04426eb14098caf7.jpg" alt="Steve Jobs Quote" width="300" height="400" />
@@ -43,8 +43,9 @@ const AllGoals = (props) => {
       </div>
       <Link to="/main/new"><button className="button-style move">NEW GOAL</button></Link>
       <div className='blurb'>Start creating goals or select a goal below to view the details and make progress updates.</div>
-      <div>
-      {props.goals.map((goal) => <Goal goal={goal} key={goal.id} />)}</div>
+      <div className="full-body">
+        {props.goals.map((goal) => <Goal goal={goal} key={goal.id} />)}</div>
+      <div className="foot">Footer</div>
     </div>);
 };
 
