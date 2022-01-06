@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { Link } from 'react-router-dom';
-
 const Form = ({ initialGoal, handleSubmit, buttonLabel, history}) => {
   const [formData, setFormData] = useState(initialGoal);
 

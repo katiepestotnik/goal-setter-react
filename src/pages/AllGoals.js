@@ -1,20 +1,21 @@
 import React from "react";
 import Goal from '../components/Goal'
 import { Link } from 'react-router-dom';
-import { useEffect } from "react";
 import {
   MDBCarousel,
   MDBCarouselInner,
   MDBCarouselItem,
   MDBCarouselElement,
-  MDBCarouselCaption,
 } from 'mdb-react-ui-kit';
 
 const AllGoals = (props) => {
   return (
     <div className="full-body">
       <div className="caroStyle">
-      <MDBCarousel fade>
+        <MDBCarousel
+          fade
+          showIndicators={true}
+          slide={true}>
           <MDBCarouselInner>
             <MDBCarouselItem className='active'>
               <MDBCarouselElement src="https://i.pinimg.com/564x/ca/e2/6f/cae26fdc102447ac04426eb14098caf7.jpg" alt="Steve Jobs Quote" width="300" height="400" />
