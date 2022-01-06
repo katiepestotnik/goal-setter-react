@@ -1,9 +1,58 @@
+/* Color Palette: #082341 Midnight Blue
+#023550 Lighter Midnight Blue
+#4a2b4a Darks Late Gray/darkest pink shade
+#964e68 indianred
+#e85b71 indian red lighter
+#2487a4 steelblue */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 body {
   font-family: Roboto, Helvetica, Arial, sans-serif;
 }
-
+.full-body{
+  background: linear-gradient(#082341,#4a2b4a,#082341);
+  height: 100vh;
+}
 
 .caroStyle {
   width: 50%;
   margin: 0 auto;
+}
+.header-nav {
+  background: linear-gradient(#e85b71, #964e68);
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.title{
+  color: #023550;
+  text-decoration: none;
+  font-size: 35px;
+  font-family: 'Poppins', sans-serif;
+  display: inline-block;
+  padding-bottom: 20px;
+}
+.button-style{
+  background-color: #082341;
+  color: #e85b71;
+}
+
+.link-style{
+  list-style: none;
+  margin-top: 10px;
+}
+.link-font{
+  color: #964e68;
+  font-size: 40px;
+}
+.link-box {
+  margin-top: 50px;
+  text-align: center;
+}
+.intro{
+  color: #2487a4;
+  margin: 20px 0 20px 10px;
+  font-size: 25px;
+
 }

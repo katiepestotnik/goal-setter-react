@@ -1,4 +1,3 @@
-import './App.css';
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import Signup from "./pages/Signup";
@@ -9,6 +8,7 @@ import Global from "./Global";
 function App(props) {
   return (
     <Global>
+      <div className="full-body">
       <Header />
       <Switch>
         <Route exact path="/"
@@ -26,7 +26,8 @@ function App(props) {
           path="/main"
           render={(rp)=> <Main {...rp}/>}>
         </Route>
-      </Switch>
+        </Switch>
+        </div>
     </Global>
   );
 }

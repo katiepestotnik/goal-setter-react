@@ -13,21 +13,21 @@ const Home = (props) => {
     </Link>
     return (
         <div>
-            <ul>
-                <li>
-                    <Link
-                        to="login"><h2>LOGIN</h2>
-                    </Link>
-                </li>
-                <li>
-                    <Link
-                        to="signup"><h2>REGISTER</h2>
-                    </Link>
-                </li>
-            </ul>
             <div>
-                <h3>Change your life with a few goals</h3>
-                <p>Focus on the goal not the task. You can start programming a better life for yourself with a few goals.</p>
+                <div className="intro">Achieving dreams with a few goals...</div>
+                <div className="intro">Focus on the goal not the task.<br/> You can start programming a better life for yourself with a few goals.</div>
+            </div>
+            <div className="link-box">
+                <li className="link-style">
+                    <Link
+                        to="login"><div className="link-font">LOGIN</div>
+                    </Link>
+                </li>
+                <li className="link-style">
+                    <Link
+                        to="signup"><div className="link-font">REGISTER</div>
+                    </Link>
+                </li>
             </div>
         </div>
     );
