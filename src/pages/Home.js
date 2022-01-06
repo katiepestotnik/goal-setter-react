@@ -29,6 +29,7 @@ const Home = (props) => {
                     </Link>
                 </li>
             </div>
+            <div className="home-image"></div>
         </div>
     );
 };

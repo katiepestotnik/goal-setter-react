@@ -4,19 +4,21 @@
 #964e68 indianred
 #e85b71 indian red lighter
 #2487a4 steelblue */
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 body {
   font-family: Roboto, Helvetica, Arial, sans-serif;
+  height: 100%;
 }
-.full-body{
-  background: linear-gradient(#082341,#4a2b4a,#082341);
+.full-body {
+  background: linear-gradient(#082341, #4a2b4a, #082341);
   height: 100vh;
 }
 
 .caroStyle {
-  width: 50%;
-  margin: 0 auto;
+  width: 75%;
+  margin: 10px auto;
+  border: 3px solid #023550;
 }
 .header-nav {
   background: linear-gradient(#e85b71, #964e68);
@@ -25,24 +27,25 @@ body {
   justify-content: space-between;
   padding: 10px;
 }
-.title{
+.title {
   color: #023550;
   text-decoration: none;
-  font-size: 35px;
-  font-family: 'Poppins', sans-serif;
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
   display: inline-block;
   padding-bottom: 20px;
 }
-.button-style{
+.button-style {
   background-color: #082341;
   color: #e85b71;
+  padding: 7px;
+  font-size: 19px;
 }
-
-.link-style{
+.link-style {
   list-style: none;
   margin-top: 10px;
 }
-.link-font{
+.link-font {
   color: #964e68;
   font-size: 40px;
 }
@@ -50,9 +53,82 @@ body {
   margin-top: 50px;
   text-align: center;
 }
-.intro{
+.home-image{
+  background-image: url("https://media.istockphoto.com/vectors/dream-big-silhouette-of-man-with-raised-arms-looking-at-the-open-to-vector-id1252341000?k=20&m=1252341000&s=612x612&w=0&h=F-pFF46SoeCsUVO0HMzhH6W6tBOVRH_1L2x87bgvDiI=");
+  width: 100%;
+  height: 300px;
+  background-repeat: no-repeat;
+  margin-bottom: 10px;
+
+}
+.intro {
   color: #2487a4;
   margin: 20px 0 20px 10px;
   font-size: 25px;
-
 }
+.input-style {
+  margin-bottom: 20px;
+  font-size: 20px;
+  padding: 7px;
+  width: 250px;
+  border-bottom: 1px solid #023550;
+  border-right: 1px solid hsl(201, 95%, 16%);
+  background-color: #082341 !important;
+  color: #964e68;
+  display: inline-block;
+}
+.input-box{
+  text-align: center;
+}
+.title-second {
+  color: #2487a4;
+  text-decoration: none;
+  font-size: 35px;
+  font-family: "Poppins", sans-serif;
+  display: inline-block;
+  padding-bottom: 20px;
+}
+.form{
+  color: #2487a4;
+  font-size: 20px;
+}
+.blurb {
+  color: #e85b71;
+  padding: 5px;
+  font-size: 20px;
+  margin: 7px;
+}
+.goal {
+  color: #2487a4;
+  font-size: 29px;
+  font-family: "Poppins", sans-serif;
+  padding: 5px;
+  text-align: center;
+}
+.move{
+  display: block;
+  margin: 0 auto;
+}
+.single {
+  color: #2487a4;
+  margin: 7px;
+  padding: 5px;
+  font-size: 20px;
+}
+.objective {
+  color: #2487a4;
+  margin: 10px 7px 20px 7px;
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid #023550;
+  background-color: #082341;
+}
+.special-delete{
+  background-color: #082341;
+  color: #e85b71;
+  margin: 7px;
+}
+.found-box{
+  border: 2px solid #023550;
+}
+

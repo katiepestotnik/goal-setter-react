@@ -22,26 +22,29 @@ const FormUpdate = ({ initialUpdate, handleSubmit, buttonLabel, history, match }
         history.push(`/main/goal/${id}`);
       };
     return (
-      <div>
-         <form onSubmit={handleFormSubmit}>
+      <div className="input-box full-body">
+                <div className='title-second'>Update</div>
+        <form onSubmit={handleFormSubmit}>
+        <div className="form">Specific step taken to achieve goal</div>
           <label>
-            Describe Action Taken to achieve this goal.
             <input
               type="text"
               onChange={handleChange}
               value={formData.actions}
               name="actions"
+              className='input-style'
             />
-          </label><br/>
+          </label><br />
+          <div className="form">Percentage of goal completed</div>
           <label>
-            Give yourself a score between 1 - 10.
             <input
               type="number"
               onChange={handleChange}
               value={formData.self_evaluation}
               name="self_evaluation"
-              min="1"
-              max="10"
+              min="0"
+              max="100"
+              className='input-style'
             />
           </label><br />
         {/* <label>
@@ -53,11 +56,8 @@ const FormUpdate = ({ initialUpdate, handleSubmit, buttonLabel, history, match }
             name="completed" 
             />
           </label><br /> */}
-      <input type="submit" value={buttonLabel} />
-      </form>
-        <Link to="/main/">
-        <button>Main Page</button>
-      </Link>   
+      <input className="button-style"type="submit" value={buttonLabel} />
+      </form> 
         </div>)
 }
 export default FormUpdate;

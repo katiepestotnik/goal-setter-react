@@ -14,49 +14,52 @@ const Form = ({ initialGoal, handleSubmit, buttonLabel, history}) => {
     history.push("/main");
   };
   return (
-    <div>
-    <form onSubmit={handleFormSubmit}>
+    <div className="input-box full-body">
+        <div className='title-second'>New Goal</div>
+      <form onSubmit={handleFormSubmit}>
+      <div className="form">Goal Name</div>
       <label>
-        Goal Name:
         <input
           type="text"
           onChange={handleChange}
           value={formData.name}
           name="name"
-        />
-      </label><br/>
-      <label>
-        Start Date:
-      <input
-        type="date"
-        onChange={handleChange}
-        value={formData.start_date}
-        name="start_date"
-        />
-      </label><br />
-      <label>
-        Target End Date:
-      <input
-        type="date"
-        onChange={handleChange}
-        value={formData.end_date}
-        name="end_date" 
+          className='input-style'
+          placeholder="Goal Name"
         />
         </label><br />
-        <label>
-          Goal Description:
+        <div className="form">Start Date</div>
+      <label>
         <input
+          type="date"
+          onChange={handleChange}
+          value={formData.start_date}
+          name="start_date"
+          className='input-style'
+        />
+        </label><br />
+        <div className="form">Target End Date</div>
+        <label>
+          <input
+            type="date"
+            onChange={handleChange}
+            value={formData.end_date}
+            name="end_date" 
+            className='input-style'
+        />
+        </label><br />
+        <div className="form">Main Objective</div>
+        <label>
+        <textarea
           type="text"
           onChange={handleChange}
           value={formData.description}
           name="description"
+          className='input-style'
           />
         </label><br />
-      <input type="submit" value={buttonLabel} />
+      <input className="button-style" type="submit" value={buttonLabel} />
       </form>
-      <Link to="/main">
-        <button>Main Page</button>
-      </Link>
     </div>
   );
 };

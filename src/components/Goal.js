@@ -5,16 +5,9 @@ const Goal = ({ goal }) => {
     const start = goal.start_date
     return (
         <div>
-
             <Link to={`/main/goal/${goal.id}`}>
-            <h3>Goal: {goal.name}</h3>
+            <div className='goal'>{goal.name}</div>
             </Link>
-            <p>Description: {goal.description}</p><br />
-            <div>Start Date: {start}</div><br/>
-            <div>End Date: {end}</div><br/>
-
-            <div>Goal Reference #{goal.id}</div><br/>
-
         </div>
     )
   };

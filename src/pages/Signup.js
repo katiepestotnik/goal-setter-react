@@ -34,28 +34,32 @@ const Signup = (props) => {
     }
     return (
         <div>
-            <div>
-                <h3>Create Account</h3>
+            <div className='input-box'>
+                <div className='title-second'>CREATE ACCOUNT</div>
                 <form onSubmit={handleSubmit}>
                     <div>
-                        <label for="CreateUsername">Username</label>
                         <input
                             type="text" name="username" value={form.username}
-                            onChange={handleChange}></input></div>
+                            onChange={handleChange}
+                            className='input-style'
+                            placeholder='name'></input></div>
                     <div>
-                        <label for="CreatePassword">Password</label>
                         <input
                             type="password" name="password" value={form.password}
-                            onChange={handleChange}></input>
+                            onChange={handleChange}
+                            className='input-style'
+                            placeholder='password'></input>
                     </div>
                     <div>
-                        <label for="CreateEmail">Email</label>
                         <input
                             type="email" name="email" value={form.email}
-                            onChange={handleChange}></input>
+                            onChange={handleChange}
+                            className='input-style'
+                            placeholder='email'></input>
                     </div>
                     <input
-                        type="submit" value="REGISTER"></input>
+                        type="submit" value="REGISTER"
+                        className='button-style'></input>
                 </form>
             </div>
         </div>

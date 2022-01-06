@@ -11,32 +11,36 @@ const SingleGoal = (props) => {
     })
     console.log(id)
     return (
-        <div>
-            <h1>Goal: {goal.name}</h1>
-            <div>Target Start Date: {goal.start_date}</div>
-            <div>Target End Date: {goal.end_date}</div>
-            <p>Description: {goal.description}</p>
-            <div>Goal Id: {goal.id}</div>
+        <div className="full-body">
+            <div className="goal">{goal.name}</div>
+            <div className="single">Start Date: {goal.start_date}</div>
+            <div className="single">Target End Date: {goal.end_date}</div>
+            <div className="objective"> {goal.description}</div>
             <button
-                onClick={(e) => props.edit(goal)}>Edit
+                className="button-style"
+                onClick={(e) => props.edit(goal)}>EDIT
             </button>
             <button
-                onClick={(e) => props.deleteGoal(goal)}>Delete
+                className="button-style"
+                onClick={(e) => props.deleteGoal(goal)}>DELETE
             </button>
-            <Link to="/main"><button>Back</button></Link><br /><br />
-            <h3>Status Updates</h3>
-            <div className="found-box">
+            <div className="goal">Status Updates</div>
+            <div>
+                <Link to={`/main/goals/${id}/update`}><button className="button-style">ADD UPDATE</button></Link>
+            </div>
+            <div className="full-body" style={{marginTop: "10px"}}>
                 {found.map((f) => {
-                    return <><div>Actions Taken: {f.actions}</div>
-                        <div>Score Update: {f.self_evaluation}</div>
-                        <div>Goal Completed? {f.completed ? "true" : "false"}</div>
-                        <div>Goal ID # {f.goal_id}</div>
-                                <button
-                onClick={(e) => props.deleteUpdate(found)}>Delete
-                            </button></>
+                    return <div className="found-box">                       <div className="single">Action: {f.actions}</div>
+                        <div className="single">% Goal Completed: {f.self_evaluation}</div>
+                        {/* <div>Goal Completed? {f.completed ? "true" : "false"}</div> */}
+                        <div>
+                    <button
+                        className="special-delete"
+                        onClick={(e) => props.deleteUpdate(found)}>X
+                        </button></div>
+</div> 
                 })}
             </div>
-            <Link to={`/main/goals/${id}/update`}><button>Add Update</button></Link>
         </div>
 
     )}     

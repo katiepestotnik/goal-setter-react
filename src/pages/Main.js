@@ -136,7 +136,7 @@ const Main = (props) => {
                     state={state}
                     initialGoal={nullGoal}
                     handleSubmit={addGoal}
-                    buttonLabel="Create Goal"/>}>
+                    buttonLabel="CREATE"/>}>
             </Route>
             <Route
           path="/main/goals/:id/update"
@@ -147,14 +147,14 @@ const Main = (props) => {
                     handleSubmit={addUpdate}
                     updates={updates}
                     goals={goals}
-                    buttonLabel="Add Update"/>}>
+                    buttonLabel="UPDATE"/>}>
         </Route>
         <Route
           path="/main/edit"
                 render={(rp) => (<Form {...rp}
                     initialGoal={targetGoal}
                     handleSubmit={updateGoal}
-                    buttonLabel="Update Goal"
+                    buttonLabel="UPDATE"
                     state={state}/>
                 )}>
         </Route>
