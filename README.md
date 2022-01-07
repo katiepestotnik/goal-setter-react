@@ -9,7 +9,7 @@ Live Site:
 Technologies:
 - React
 
-- Bootstrap with Material Design
+- Bootstrap with Material Design for carousel
   - mdb-react-ui-kit
   - https://mdbootstrap.com/docs/react/
 
@@ -17,21 +17,17 @@ Technologies:
 
 - JavaScript, CSS, HTML
 
-- Backend API Ruby on Rails
+- Backend API Ruby on Rails/PostgreSQL DB
 
 Styling:
 - Favicon: https://favicon.io/emoji-favicons/
-- Responsive:
-  - Base CSS set for 414 x 736
-  - @media only screen and (min-width: 576px)
-  - @media only screen and (min-width: 768px)
-  - @media only screen and (min-width: 992px) 
-  - @media only screen and (min-width: 1200px)
-
-![Color Palette](https://i.pinimg.com/564x/8f/ce/17/8fce17ddc772198b6994c39f5e789382.jpg)
+- Responsive Design with media queries.
 
 
-Future Improvement:
+<img src="dream-achiever.png" alt="main page" width="250" height="250">
+
+
+Future Improvements:
 - Rebuild for better and more complex backend api models
 - Actionmailer with Ruby to send user email reminders
 - Add third party API to backend
@@ -49,7 +45,8 @@ Backend:
 
 Challenges:
 - Page refresh breaking app. Added error handling to check !token as well as optional chaining to handle the return map items.
-  - Now user is redirected to login page.
+  - Now user is redirected to login page only on localhost
+  - Deploy fails, looking into webpack-dev-server/api history fallback
 - Nesting URLs correctly especially to get the updates to add to the specific goal
 - Handling responsive design with Bootstrap added. I prefer to do my own styling but used Bootstrap for carousel.
 - Completed in Update Model, handling the Boolean value and getting it to display properly once user selects checkbox. Fixed with !! in the form and also was able to change the background of the checkbox with invert() and hue-rotate()

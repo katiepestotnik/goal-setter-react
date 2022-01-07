@@ -1,184 +1,318 @@
-/* Color Palette: #082341 Midnight Blue
-#023550 Lighter Midnight Blue
-#4a2b4a Darks Late Gray/darkest pink shade
-#964e68 indianred
-#e85b71 indian red lighter
-#2da9ce lightblue */
-/* @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
-body {
-  font-family: Roboto, Helvetica, Arial, sans-serif;
-  height: 100%;
+/* PAGES */
+.full-body{
+  background-color: #00b1bf;
+  height: 100vh
 }
-.full-body {
-  background: linear-gradient( #2da9ce, #082341);
-  height: 100vh;
+.intro{
+  color: #082341;
+  margin: 20px;
+  font-size: 2em
 }
-.full-body-second {
-  background-color: #2da9ce;
-  height: 100vh;
+.second-title {
+  color: #082341;
+  font-size: 2em;
+  font-family: "Poppins", sans-serif;
+  padding: 20px;
+}
+.main-para{
+  color: #082341;
+  font-size: 1.2em;
+  padding: 5px;
+  text-align: justify;
+}
+.single{
+  margin: 20px;
+  font-size: 1.7em;
+  color: #fff
 }
 
-.caroStyle {
-  width: 75%;
-  margin: 10px auto;
-  border: 3px solid #023550;
-}
-.header-nav {
-  background: linear-gradient(#e85b71, #964e68);
-  height: 80px;
+
+/* NAV */
+.nav-header {
+  background-color: #ff005d;
+  height: 8vh;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 10px;
+  filter: brightness(90%)
 }
 .title {
-  color: #023550;
-  text-decoration: none;
-  font-size: 25px;
+  color: #fff;
+  font-size: 1.5em;
   font-family: "Poppins", sans-serif;
-  display: inline-block;
-  padding-bottom: 20px;
+  margin-left: 5px;
 }
+
+/* BUTTON AND LINK */
 .button-style {
   background-color: #082341;
-  color: #e85b71;
-  padding: 7px;
-  font-size: 19px;
-  margin: 5px
+  color: #fff;
+  font-size: 1em;
+  margin: 5px;
+  padding: 5px;
 }
+.button-style:hover{
+  background-color: #ff005d;
+  color: #fff;
+}
+
 .link-style {
   list-style: none;
   margin-top: 10px;
 }
 .link-font {
-  color: #e85b71;
+  color: #ff005d;
   font-size: 40px;
 }
 .link-box {
   margin-top: 50px;
   text-align: center;
 }
-.home-image{
-  background-image: url("https://media.istockphoto.com/vectors/dream-big-silhouette-of-man-with-raised-arms-looking-at-the-open-to-vector-id1252341000?k=20&m=1252341000&s=612x612&w=0&h=F-pFF46SoeCsUVO0HMzhH6W6tBOVRH_1L2x87bgvDiI=");
-  max-width: 100%;
-  height: 300px;
-  background-repeat: no-repeat;
-  margin-bottom: 10px;
-}
-.signup-image{
-  background-image: url("https://www.tacresults.com/sites/default/files/images/Destiny.jpg");
-  width: 100%;
-  height: 300px;
-  background-repeat: no-repeat;
-  margin-bottom: 10px;
-
-}
-.login-image{
-  background-image: url("https://www.tanveernaseer.com/wp-content/uploads/2013/01/Discovering-what-success-looks-like.jpg");
-  width: 100%;
-  height: 300px;
-  background-repeat: no-repeat;
-  margin-bottom: 10px;
-
-}
-.intro {
-  color: #082341;
-  margin: 20px 0 20px 10px;
-  font-size: 25px;
-}
-.input-style {
-  margin-bottom: 20px;
-  font-size: 20px;
-  padding: 7px;
-  width: 250px;
-  border-bottom: 1px solid #023550;
-  border-right: 1px solid hsl(201, 95%, 16%);
-  background-color: #082341;
-  color: #964e68;
-  display: inline-block;
-}
-.input-box{
-  text-align: center;
-}
-.title-second {
-  color: #4a2b4a;
-  text-decoration: none;
-  font-size: 35px;
-  font-family: "Poppins", sans-serif;
-  display: inline-block;
-  padding-bottom: 20px;
-}
-.form{
-  color: #082341;
-  font-size: 20px;
-}
-.blurb {
-  color: #2da9ce;
-  padding: 5px;
-  font-size: 20px;
-  margin: 7px;
-}
-.goal {
-  color: #082341;
-  font-size: 29px;
-  font-family: "Poppins", sans-serif;
-  padding: 5px;
-  text-align: center;
-}
-.move{
-  display: block;
-  margin: 0 auto;
-}
-.single {
-  color: #082341;
-  margin: 7px;
-  padding: 5px;
-  font-size: 20px;
-}
-.objective {
-  color: #082341;
-  margin: 10px 7px 20px 7px;
-  font-size: 25px;
-}
 .special-delete{
   background-color: #082341;
-  color: #e85b71;
+  color: #fff;
   margin: 7px;
 }
-.found-box{
-  border: 3px solid #4a2b4a;
-  margin: 1px;
-
-}
-.foot{
-  height: 80px;
-  width: 100%;
-  background: linear-gradient(#e85b71, #964e68);
-  color: transparent;
-
+/* IMAGES */
+.home-image{
+  display: block;
+  background-repeat: no-repeat;
+  height: 300px;
+  margin: 0 auto;
+  margin-top: 40px;
 }
 .status-image{
   height: 100px;
   width: 100%;
   margin: 10px 0;
+  border: 3px solid #082341
 }
+.form-image{
+  height: 100px;
+  width: 100%;
+  margin: 10px 0;
+  border: 3px solid #082341
+}
+/* MAP Styles */
+.goal{
+  color: #fff;
+  font-size: 29px;
+  font-family: "Poppins", sans-serif;
+  padding: 5px;
+  text-align: center;
+  margin: 5px;
+}
+.goal:hover{
+  color: #ff005d;
+}
+
+.update{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 2em;
+  background-color: #ffbbd4;
+  padding: 10px;
+  align-items: center;
+  flex-direction: column;
+  border: 3px solid #082341
+}
+.update-box{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+/* FORM */
+.input-box{
+  text-align: center;
+}
+.input-style {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  padding: 7px;
+  width: 250px;
+  border-bottom: 1px solid #082341;
+  border-right: 1px solid #082341;
+  display: inline-block;
+}
+.form{
+  color: #fff;
+  font-size: 2em;
+}
+
 input[type="checkbox"]{
   height: 30px;
   filter: invert(90%) hue-rotate(300deg);
+}
+@media only screen and (min-width:360px){
+  .intro{
+    font-size: 1.2em;
+  }
+  .home-image{
+    width: 100%;
+  }
+  .form{
+    font-size:1.5em;
+  }
+  .single{
+    font-size: 1.8em;
+  }
+  .update{
+    font-size: 1em;
+  }
+  .form-image{
+    display: none;
+  }
 
 }
-@media only screen and(min-width:360px){
+@media only screen and (min-width: 486px){
+  .main-para{
+      text-align: center;
+      font-size: 1.8em;
+    }
+    .all-button{
+      display: block;
+      margin: 0 auto;
+      margin-top: 5px;
+    }
+    .form{
+      font-size:1.5em;
+    }
+    .single{
+      text-align: center;
+    }
+    .update{
+      font-size: 1em;
+    }
+    .form-image{
+      height: 150px;
+      width: 50%;
+      border: 3px solid #082341
+    }
+  }
 
-}
-@media only screen and (min-width: 576px){
-
-}
 @media only screen and (min-width: 768px){
+  .caroStyle {
+    width: 60%;
+    margin: 10px auto;
+  }
+  .title{
+    font-size: 2.5em;
+  }
+  .home-image{
+    width: 50%
+  }
+  .all-button{
+    display: block;
+    margin: 0 auto;
+    margin-top: 5px;
+  }
+  .main-para{
+    text-align: center;
+    font-size: 1.8em;
+  }
+  .single{
+    text-align: center;
+  }
+  .update{
+    font-size: 1.3em;
+    flex-direction: row;
+  }
+  .status-image{
+    width: 98%;
+    margin: 0 auto;
+    display: block;
+    margin-top: 10px;
+  }
+  .form-image{
+    height: 200px;
+    width: 50%;
+    margin: 10px 0;
+    border: 3px solid #082341
+  }
 
 }
 @media only screen and (min-width: 992px){
-
+  .caroStyle {
+    width: 50%;
+    margin: 10px auto;
+  }
+  .title{
+    font-size: 2.5em;
+  }
+  .home-image{
+    width: 70%;
+    margin-top: 100px;
+    height: 300px;
+  }
+  .all-button{
+    display: block;
+    margin: 0 auto;
+    margin-top: 5px;
+  }
+  .main-para{
+    text-align: center;
+    font-size: 1.8em;
+  }
+  .single{
+    text-align: center;
+  }
+  .update{
+    font-size: 1.3em;
+    flex-direction: row;
+  }
+  .status-image{
+    width: 99%;
+    margin: 0 auto;
+    display: block;
+    margin-top: 10px;
+  }
 } 
 @media only screen and (min-width: 1200px){
+  .caroStyle {
+    width: 40%;
+    margin: 10px auto;
+  }
+  .title{
+    font-size: 2.5em;
+  }
+  .home-image{
+    width: 70%;
+    margin-top: 8px;
+    height: 400px;
 
-} */
+  }
+  .button-style{
+    font-size: 1.2em;
+  }
+  .main-para{
+    text-align: center;
+    font-size: 1.8em;
+  }
+  .all-button{
+    display: block;
+    margin: 0 auto;
+    margin-top: 5px;
+  }
+  .update{
+    font-size: 1.3em;
+    flex-direction: row;
+  }
+  .status-image{
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .form-image{
+    display: block;
+    margin: 0 auto;
+    margin-top: 5px;
+  }
+
+}

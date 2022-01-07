@@ -18,7 +18,7 @@ const FormUpdate = ({ handleSubmit, buttonLabel, history, match }) => {
       };
     return (
       <div className="input-box full-body">
-          <div className='title-second'>Update</div>
+          <div className='second-title'>Update</div>
           <form onSubmit={handleFormSubmit}>
               <div className="form">Specific step taken to achieve goal</div>
               <label>
@@ -59,9 +59,6 @@ const FormUpdate = ({ handleSubmit, buttonLabel, history, match }) => {
                   value={buttonLabel}
                 />
         </form>    
-    <div className="foot" style={{marginTop:"270px"}}>
-        Foot
-      </div>
           </div>)
 }
 export default FormUpdate;

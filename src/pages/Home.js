@@ -12,10 +12,10 @@ const Home = (props) => {
         </button>
     </Link>
     return (
-        <div>
+        <div className="full-body">
             <div>
                 <div className="intro">Achieving dreams with a few goals...</div>
-                <div className="intro">Focus on the goal not the task.<br/> You can start programming a better life for yourself with a few goals.</div>
+                <div className="intro">Focus on the goal not the task.<br/>Start programming a better life for yourself.</div>
             </div>
             <div className="link-box">
                 <li className="link-style">
@@ -29,7 +29,9 @@ const Home = (props) => {
                     </Link>
                 </li>
             </div>
-            <div className="home-image"></div>
+            <div>
+                <img className="home-image" src="https://media.istockphoto.com/vectors/dream-big-silhouette-of-man-with-raised-arms-looking-at-the-open-to-vector-id1252341000?k=20&m=1252341000&s=612x612&w=0&h=F-pFF46SoeCsUVO0HMzhH6W6tBOVRH_1L2x87bgvDiI=" alt="dream"/>
+            </div>
         </div>
     );
 };

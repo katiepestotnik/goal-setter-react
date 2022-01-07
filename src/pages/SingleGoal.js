@@ -16,29 +16,30 @@ const SingleGoal = (props) => {
     })
     return (
         <div className="full-body">
-            <div className="goal">{goal?.name}</div>
-            <div className="objective"> {goal?.description}</div>
-            <div className="single">Start Date: {goal?.start_date}</div>
-            <div className="single">Target End Date: {goal?.end_date}</div>
-
+            <div className="single">
+            <div>{goal?.name}</div>
+            <div> {goal?.description}</div>
+            <div>Start Date: {goal?.start_date}</div>
+            <div>Target End Date: {goal?.end_date}</div>
+            </div>
             <button
-                className="button-style"
+                className="button-style all-button"
                 onClick={(e) => props.edit(goal)}>EDIT
             </button>
             <button
-                className="button-style"
+                className="button-style all-button"
                 onClick={(e) => props.deleteGoal(goal)}>DELETE
-            </button>
+                </button>
             <div><img className="status-image" src="https://h5p.org/sites/default/files/status%20update_0.jpg" alt="status updates"></img></div>
             <div>
                 <Link to={`/main/goals/${id}/update`}><button className="button-style">ADD UPDATE</button></Link>
             </div>
-            <div className="full-body-second" style={{marginTop: "10px"}}>
+            <div className="full-body update-box">
                 {found.map((f) => {
-                    return <div className="found-box container">
-                                <div className="single">Action: {f.actions}</div>
-                                <div className="single">% Goal Completed: {f.self_evaluation}</div>
-                                <div className="single">Goal Completed? {f.completed ? "Yes!" : "Not Yet"}</div>
+                    return <div className="update">
+                                <div>Action: {f.actions}</div>
+                                <div>% Goal Completed: {f.self_evaluation}</div>
+                                <div>Goal Completed? {f.completed ? "Yes!" : "Not Yet"}</div>
                                 <div>
                                 <button
                                 className="special-delete"
@@ -47,7 +48,6 @@ const SingleGoal = (props) => {
                             </div> 
                 })}
             </div>
-            <div className="foot">Footer</div>
         </div>
 
     )}     

@@ -37,7 +37,7 @@ const Login = (props) => {
     return (
         <div>
             <div  className='input-box'>
-                <div className='title-second'>LOGIN</div>
+                <div className='second-title'>LOGIN</div>
                 <form onSubmit={handleSubmit}>
                     <div>
                         <input
@@ -69,7 +69,7 @@ const Login = (props) => {
                 </input>
             </form>
             </div>
-            <div className="login-image"></div>
+            <div><img className="home-image" src="https://images.unsplash.com/photo-1497561813398-8fcc7a37b567?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHN1Y2Nlc3N8ZW58MHx8MHx8&w=1000&q=80" alt="success"/></div>
     </div>)
 };
 export default Login;

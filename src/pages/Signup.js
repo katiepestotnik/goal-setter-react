@@ -35,7 +35,7 @@ const Signup = (props) => {
     return (
         <div>
             <div className='input-box'>
-                <div className='title-second'>CREATE ACCOUNT</div>
+                <div className='second-title'>CREATE ACCOUNT</div>
                 <form onSubmit={handleSubmit}>
                     <div>
                         <input
@@ -62,7 +62,8 @@ const Signup = (props) => {
                         className='button-style'></input>
                 </form>
             </div>
-            <div className="signup-image"></div>
+            <div>
+                <img className="home-image" src="https://www.tacresults.com/sites/default/files/images/Destiny.jpg" alt="shakespeare quote" /></div>
         </div>
     )
 };

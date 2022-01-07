@@ -18,13 +18,13 @@ const AllGoals = (props) => {
           slide="true">
           <MDBCarouselInner>
             <MDBCarouselItem className='active'>
-              <MDBCarouselElement src="https://i.pinimg.com/564x/ca/e2/6f/cae26fdc102447ac04426eb14098caf7.jpg" alt="Steve Jobs Quote" width="300" height="400" />
+              <MDBCarouselElement src="https://i.pinimg.com/564x/70/7b/92/707b9285535f819c9ca65f6e4dec49f2.jpg" alt="Richard Branson Quote" width="300" height="400" />
             </MDBCarouselItem>
             <MDBCarouselItem>
             <MDBCarouselElement src="https://i.pinimg.com/564x/9a/0c/60/9a0c60025fe7517a0e4d569160b31fea.jpg" alt="make it happen" width="300" height="400" />
             </MDBCarouselItem>
             <MDBCarouselItem>
-            <MDBCarouselElement src="https://i.pinimg.com/564x/70/7b/92/707b9285535f819c9ca65f6e4dec49f2.jpg" alt="Richard Branson Quote" width="300" height="400" />
+            <MDBCarouselElement src="https://i.pinimg.com/564x/ca/e2/6f/cae26fdc102447ac04426eb14098caf7.jpg" alt="Steve Jobs Quote" width="300" height="400" />
             </MDBCarouselItem>
             <MDBCarouselItem>
             <MDBCarouselElement src="https://i.pinimg.com/564x/95/a8/29/95a8294f16e941ae4a0d9424fe56b308.jpg" alt="action to goals" width="300" height="400" />
@@ -41,11 +41,18 @@ const AllGoals = (props) => {
         </MDBCarouselInner>
         </MDBCarousel>
       </div>
-      <Link to="/main/new"><button className="button-style move">NEW GOAL</button></Link>
-      <div className='blurb'>Start creating goals or select a goal below to view the details and make progress updates.</div>
+      <Link to="/main/new"><button className="button-style all-button">NEW GOAL</button></Link>
+      <div className='main-para'>Start creating goals or select a goal below to view the details and make progress updates.</div>
+      <hr style={{color: "#082341", height: "5px", backgroundColor: "#082341"} }/>
       <div className="full-body">
-        {props.goals.map((goal) => <Goal goal={goal} key={goal.id} />)}</div>
-      <div className="foot">Footer</div>
+        {props.goals.map((goal) => {
+          return (
+            <div>
+              <Goal goal={goal} key={goal.id} />
+            </div>)
+        })
+          }
+      </div>
     </div>);
 };
 

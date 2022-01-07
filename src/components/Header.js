@@ -9,12 +9,12 @@ const Header = (props) => {
         setState({...state, token:null})
     }}>
         LOGOUT
-    </button>
+        </button>
 </Link>
     return (
-        <div className='nav-background'>
-            <nav className='header-nav'>
-                <div className='title'>The Dream Achiever</div>
+        <div>
+            <nav className='nav-header'>
+                <div className='title'>THE DREAM ACHIEVER</div>
                 <Link to="/">{state.token ? logout : null}</Link>
             </nav>
         </div>

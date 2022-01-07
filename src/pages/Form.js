@@ -14,7 +14,7 @@ const Form = ({ initialGoal, handleSubmit, buttonLabel, history}) => {
   };
   return (
     <div className="input-box full-body">
-        <div className='title-second'>New Goal</div>
+        <div className='second-title'>Keeping taking steps towards growth!</div>
       <form onSubmit={handleFormSubmit}>
       <div className="form">Goal Name</div>
       <label>
@@ -59,10 +59,7 @@ const Form = ({ initialGoal, handleSubmit, buttonLabel, history}) => {
         </label><br />
       <input className="button-style" type="submit" value={buttonLabel} />
       </form>
-
-    <div className="foot" style={{marginTop:"80px"}}>
-        Foot
-      </div>
+      <img className="form-image" src="https://www.slideteam.net/media/catalog/product/cache/960x720/b/l/blue_letters_of_goal_with_construction_equipment_stock_photo_Slide01.jpg" alt="goal construction"></img>
       </div>
   );
 };
