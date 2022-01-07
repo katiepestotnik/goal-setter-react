@@ -59,10 +59,8 @@ const Form = ({ initialGoal, handleSubmit, buttonLabel, history}) => {
         </label><br />
       <input className="button-style" type="submit" value={buttonLabel} />
       </form>
-      <Link to="/main">
-        <button className="button-style">BACK</button></Link>
 
-    <div className="foot" style={{marginTop:"20px"}}>
+    <div className="foot" style={{marginTop:"80px"}}>
         Foot
       </div>
       </div>

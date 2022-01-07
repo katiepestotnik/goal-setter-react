@@ -1,7 +1,4 @@
-// boolean problem possible as well
-//refresh problem: logic to push to login when token is null
 import { useState } from 'react';
-import {Link} from 'react-router-dom'
 const FormUpdate = ({ handleSubmit, buttonLabel, history, match }) => {
   const id =match.params.id
   const [formData, setFormData] = useState({
@@ -9,7 +6,8 @@ const FormUpdate = ({ handleSubmit, buttonLabel, history, match }) => {
         self_evaluation: "",
         completed: "",
         goal_id: id
-    });
+  });
+
     const handleChange = (event) => {
         setFormData({ ...formData, [event.target.name]: event.target.value });
     };
@@ -43,25 +41,24 @@ const FormUpdate = ({ handleSubmit, buttonLabel, history, match }) => {
                     max="100"
                     className='input-style'
                   />
-              </label><br />
-        {/* <label>
-          Goal Achieved?
+          </label><br />
+          <div className="form">Goal Completed?</div>
+          <label>
           <input
-            type="checkbox"
+            type="checkbox" 
             onChange={handleChange}
-            value={formData.completed?"true":"false"}
-            name="completed" 
+            value={!!formData.completed?false:true}
+            name="completed"
+            className='input-style'  
             />
-          </label><br /> */}
+            {/* double bang terinary creates false state that allows checked to change state to true */}
+          </label><br />
                 <input
                   className="button-style"
                   type="submit"
                   value={buttonLabel}
                 />
-        </form>
-        <Link to={`/main/goal/${id}`}>
-          <button className="button-style">BACK</button></Link>
-        
+        </form>    
     <div className="foot" style={{marginTop:"270px"}}>
         Foot
       </div>

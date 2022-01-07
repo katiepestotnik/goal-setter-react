@@ -60,11 +60,10 @@ body {
 }
 .home-image{
   background-image: url("https://media.istockphoto.com/vectors/dream-big-silhouette-of-man-with-raised-arms-looking-at-the-open-to-vector-id1252341000?k=20&m=1252341000&s=612x612&w=0&h=F-pFF46SoeCsUVO0HMzhH6W6tBOVRH_1L2x87bgvDiI=");
-  width: 100%;
+  max-width: 100%;
   height: 300px;
   background-repeat: no-repeat;
   margin-bottom: 10px;
-
 }
 .signup-image{
   background-image: url("https://www.tacresults.com/sites/default/files/images/Destiny.jpg");
@@ -147,7 +146,7 @@ body {
   margin: 7px;
 }
 .found-box{
-  border: 5px solid #4a2b4a;
+  border: 3px solid #4a2b4a;
   margin: 1px;
 
 }
@@ -156,13 +155,21 @@ body {
   width: 100%;
   background: linear-gradient(#e85b71, #964e68);
   color: transparent;
+
 }
 .status-image{
   height: 100px;
   width: 100%;
   margin: 10px 0;
 }
+input[type="checkbox"]{
+  height: 30px;
+  filter: invert(90%) hue-rotate(300deg);
 
+}
+@media only screen and(min-width:360px){
+
+}
 @media only screen and (min-width: 576px){
 
 }

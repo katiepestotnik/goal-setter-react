@@ -18,8 +18,11 @@ const Main = (props) => {
         user_id: ""
     };
     const [targetGoal, setTargetGoal] = useState(nullGoal);
-
     const getGoals = async () => {
+        if (!token) {
+            alert('Login session ended. Reenter login credentials.')
+            props.history.push('/')
+        };
         const response = await fetch(`${url}/goals`, {
             method: 'get',
             headers: {
@@ -75,6 +78,9 @@ const Main = (props) => {
         props.history.push("/main");
     };
     const getUpdates = async () => {
+        if (!token) {
+            props.history.push('/')
+        };
         const response = await fetch(`${url}/updates`, {
             method: 'get',
             headers: {
@@ -87,6 +93,7 @@ const Main = (props) => {
         setUpdates(data);
     };
     const addUpdate = async (newUpdate) => {
+        console.log(newUpdate)
         const response = await fetch(`${url}/updates`, {
             method: 'post',
             headers: {
@@ -116,11 +123,11 @@ const Main = (props) => {
     useEffect(() => {
         const token = localStorage.getItem("token")
         if (!token) {
-            alert('Login not verified: Register or Reenter Login')
             props.history.push('/')
         };
         getGoals();
         getUpdates();
+
     }, []);
     return(
         <Switch>

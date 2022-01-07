@@ -47,8 +47,9 @@ Backend:
 - https://github.com/katiepestotnik/goal-setter-jwt-api
 - https://goal-setter-auth.herokuapp.com
 
-
-
-Responsive
-Completed model
-Refresh
+Challenges:
+- Page refresh breaking app. Added error handling to check !token as well as optional chaining to handle the return map items.
+  - Now user is redirected to login page.
+- Nesting URLs correctly especially to get the updates to add to the specific goal
+- Handling responsive design with Bootstrap added. I prefer to do my own styling but used Bootstrap for carousel.
+- Completed in Update Model, handling the Boolean value and getting it to display properly once user selects checkbox. Fixed with !! in the form and also was able to change the background of the checkbox with invert() and hue-rotate()
