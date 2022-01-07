@@ -123,6 +123,8 @@ const Main = (props) => {
     useEffect(() => {
         const token = localStorage.getItem("token")
         if (!token) {
+            if (!token) {
+            alert('Login session ended. Reenter login credentials.')
             props.history.push('/')
         };
         getGoals();
