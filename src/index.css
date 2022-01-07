@@ -3,7 +3,7 @@
 #4a2b4a Darks Late Gray/darkest pink shade
 #964e68 indianred
 #e85b71 indian red lighter
-##2da9ce lightblue */
+#2da9ce lightblue */
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 body {
@@ -11,7 +11,11 @@ body {
   height: 100%;
 }
 .full-body {
-  background: linear-gradient(#082341, #4a2b4a, #082341);
+  background: linear-gradient( #2da9ce, #082341);
+  height: 100vh;
+}
+.full-body-second {
+  background-color: #2da9ce;
   height: 100vh;
 }
 
@@ -47,7 +51,7 @@ body {
   margin-top: 10px;
 }
 .link-font {
-  color: #964e68;
+  color: #e85b71;
   font-size: 40px;
 }
 .link-box {
@@ -79,7 +83,7 @@ body {
 
 }
 .intro {
-  color: #2da9ce;
+  color: #082341;
   margin: 20px 0 20px 10px;
   font-size: 25px;
 }
@@ -90,7 +94,7 @@ body {
   width: 250px;
   border-bottom: 1px solid #023550;
   border-right: 1px solid hsl(201, 95%, 16%);
-  background-color: #082341 !important;
+  background-color: #082341;
   color: #964e68;
   display: inline-block;
 }
@@ -98,7 +102,7 @@ body {
   text-align: center;
 }
 .title-second {
-  color: #2da9ce;
+  color: #4a2b4a;
   text-decoration: none;
   font-size: 35px;
   font-family: "Poppins", sans-serif;
@@ -106,17 +110,17 @@ body {
   padding-bottom: 20px;
 }
 .form{
-  color: #2da9ce;
+  color: #082341;
   font-size: 20px;
 }
 .blurb {
-  color: #e85b71;
+  color: #2da9ce;
   padding: 5px;
   font-size: 20px;
   margin: 7px;
 }
 .goal {
-  color: #2da9ce;
+  color: #082341;
   font-size: 29px;
   font-family: "Poppins", sans-serif;
   padding: 5px;
@@ -127,18 +131,15 @@ body {
   margin: 0 auto;
 }
 .single {
-  color: #2da9ce;
+  color: #082341;
   margin: 7px;
   padding: 5px;
   font-size: 20px;
 }
 .objective {
-  color: #2da9ce;
+  color: #082341;
   margin: 10px 7px 20px 7px;
-  padding: 10px;
-  font-size: 20px;
-  border: 1px solid #023550;
-  background-color: #082341;
+  font-size: 25px;
 }
 .special-delete{
   background-color: #082341;
@@ -146,16 +147,20 @@ body {
   margin: 7px;
 }
 .found-box{
-  border: 2px solid #023550;
-  display: flex;
-  flex-direction: column;
-  align-items:flex-start
+  border: 5px solid #4a2b4a;
+  margin: 1px;
+
 }
 .foot{
   height: 80px;
   width: 100%;
   background: linear-gradient(#e85b71, #964e68);
   color: transparent;
+}
+.status-image{
+  height: 100px;
+  width: 100%;
+  margin: 10px 0;
 }
 
 @media only screen and (min-width: 576px){
@@ -168,5 +173,5 @@ body {
 
 } 
 @media only screen and (min-width: 1200px){
-  
+
 }

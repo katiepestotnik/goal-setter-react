@@ -60,7 +60,11 @@ const FormUpdate = ({ handleSubmit, buttonLabel, history, match }) => {
                 />
         </form>
         <Link to={`/main/goal/${id}`}>
-      <button className="button-style">BACK</button></Link>
+          <button className="button-style">BACK</button></Link>
+        
+    <div className="foot" style={{marginTop:"270px"}}>
+        Foot
+      </div>
           </div>)
 }
 export default FormUpdate;

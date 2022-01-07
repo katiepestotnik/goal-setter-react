@@ -61,7 +61,11 @@ const Form = ({ initialGoal, handleSubmit, buttonLabel, history}) => {
       </form>
       <Link to="/main">
         <button className="button-style">BACK</button></Link>
-    </div>
+
+    <div className="foot" style={{marginTop:"20px"}}>
+        Foot
+      </div>
+      </div>
   );
 };
 
