@@ -59,7 +59,6 @@ const Form = ({ initialGoal, handleSubmit, buttonLabel, history}) => {
         </label><br />
       <input className="button-style" type="submit" value={buttonLabel} />
       </form>
-      <img className="form-image" src="https://www.slideteam.net/media/catalog/product/cache/960x720/b/l/blue_letters_of_goal_with_construction_equipment_stock_photo_Slide01.jpg" alt="goal construction"></img>
       </div>
   );
 };

@@ -18,7 +18,7 @@ const SingleGoal = (props) => {
         <div className="full-body">
             <div className="single">
             <div>{goal?.name}</div>
-            <div> {goal?.description}</div>
+            <div>Objective: {goal?.description}</div>
             <div>Start Date: {goal?.start_date}</div>
             <div>Target End Date: {goal?.end_date}</div>
             </div>
@@ -33,6 +33,9 @@ const SingleGoal = (props) => {
             <div><img className="status-image" src="https://h5p.org/sites/default/files/status%20update_0.jpg" alt="status updates"></img></div>
             <div>
                 <Link to={`/main/goals/${id}/update`}><button className="button-style">ADD UPDATE</button></Link>
+            </div>
+            <div>
+                <Link to={`/main/`}><button className="button-style">BACK</button></Link>
             </div>
             <div className="full-body update-box">
                 {found.map((f) => {

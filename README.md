@@ -1,11 +1,55 @@
 # The Dream Achiever
 
 User can signup/login and create goals and add status updates to related goal.
-User will also be able to see carosuel of positive quotes on main page.
+User will also be able to see carousel of positive quotes on main page.
 
 Live Site:
 <a href="https://the-dream-achiever.netlify.app/">The Dream Achiever</a>
 
+React Router Table 
+
+    -> App
+    -> Global
+      -> Header
+        -> Switch
+          ->Route exact path="/"
+            ->Home
+          ->Route path="/signup"
+            ->Signup
+          ->Route path="/login"
+            ->Login
+          ->Route path="/main"
+            ->Main
+          ->Switch
+            ->Switch
+            ->Route exact path="/main"
+              ->AllGoals
+                goals={goals}
+            ->Route exact path="/main/goal/:id"
+              ->SingleGoal
+                goals={goals}
+                edit={getTargetGoal}
+                deleteGoal={deleteGoal}
+                updates={updates}
+                deleteUpdate{deleteUpdate}
+            ->Route path="/main/new"
+              ->Form
+                state={state}
+                initialGoal={nullGoal}
+                handleSubmit={addGoal}
+                buttonLabel="CREATE"
+            ->Route path="/main/goals/:id/update"
+              ->FormUpdate
+                state={state}
+                handleSubmit={addUpdate}
+                updates={updates}
+                goals={goals}
+                buttonLabel="UPDATE"
+            ->Route path="/main/edit"
+               ->Form
+                initialGoal={targetGoal}
+                handleSubmit={updateGoal}
+                buttonLabel="UPDATE"
 Technologies:
 - React
 
@@ -49,4 +93,4 @@ Challenges:
   - Deploy fails, looking into webpack-dev-server/api history fallback
 - Nesting URLs correctly especially to get the updates to add to the specific goal
 - Handling responsive design with Bootstrap added. I prefer to do my own styling but used Bootstrap for carousel.
-- Completed in Update Model, handling the Boolean value and getting it to display properly once user selects checkbox. Fixed with !! in the form and also was able to change the background of the checkbox with invert() and hue-rotate()
+- Completed in Update Model, handling the Boolean value and getting it to display properly once user selects checkbox. Fixed with !! in the form input element: {!!formData.completed?false:true}

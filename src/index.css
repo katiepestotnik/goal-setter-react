@@ -25,7 +25,7 @@
 .single{
   margin: 20px;
   font-size: 1.7em;
-  color: #fff
+  color: #082341;
 }
 
 
@@ -80,9 +80,8 @@
 .home-image{
   display: block;
   background-repeat: no-repeat;
-  height: 300px;
   margin: 0 auto;
-  margin-top: 40px;
+
 }
 .status-image{
   height: 100px;
@@ -90,15 +89,10 @@
   margin: 10px 0;
   border: 3px solid #082341
 }
-.form-image{
-  height: 100px;
-  width: 100%;
-  margin: 10px 0;
-  border: 3px solid #082341
-}
+
 /* MAP Styles */
 .goal{
-  color: #fff;
+  color: #082341;
   font-size: 29px;
   font-family: "Poppins", sans-serif;
   padding: 5px;
@@ -106,7 +100,7 @@
   margin: 5px;
 }
 .goal:hover{
-  color: #ff005d;
+  color: #ffbbd4;
 }
 
 .update{
@@ -163,9 +157,7 @@ input[type="checkbox"]{
   .update{
     font-size: 1em;
   }
-  .form-image{
-    display: none;
-  }
+
 
 }
 @media only screen and (min-width: 486px){
@@ -186,11 +178,6 @@ input[type="checkbox"]{
     }
     .update{
       font-size: 1em;
-    }
-    .form-image{
-      height: 150px;
-      width: 50%;
-      border: 3px solid #082341
     }
   }
 
@@ -227,13 +214,6 @@ input[type="checkbox"]{
     display: block;
     margin-top: 10px;
   }
-  .form-image{
-    height: 200px;
-    width: 50%;
-    margin: 10px 0;
-    border: 3px solid #082341
-  }
-
 }
 @media only screen and (min-width: 992px){
   .caroStyle {
@@ -270,6 +250,7 @@ input[type="checkbox"]{
     display: block;
     margin-top: 10px;
   }
+
 } 
 @media only screen and (min-width: 1200px){
   .caroStyle {
@@ -282,7 +263,7 @@ input[type="checkbox"]{
   .home-image{
     width: 70%;
     margin-top: 8px;
-    height: 400px;
+    height: 300px;
 
   }
   .button-style{
@@ -308,11 +289,6 @@ input[type="checkbox"]{
     margin: 0 auto;
     margin-top: 10px;
     margin-bottom: 10px;
-  }
-  .form-image{
-    display: block;
-    margin: 0 auto;
-    margin-top: 5px;
-  }
 
+  }
 }
