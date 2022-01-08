@@ -68,7 +68,7 @@ Styling:
 - Responsive Design with media queries.
 
 
-<img src="dream-achiever.png" alt="main page" width="250" height="250">
+<img src="dream1.png" alt="main page" width="250" height="250">
 
 
 Future Improvements:
